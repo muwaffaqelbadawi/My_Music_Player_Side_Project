@@ -1,4 +1,4 @@
-import pygames
+# import pygames
 import random
 
 class Infofolder:
@@ -174,10 +174,10 @@ class Function:
          self.linklist = linklist
          self.favouritesongdiroctory = favouritesongdiroctory
          
-     def Play(self, songlink):
-         pygame.mixer.init()
-         pygame.mixer.music.load(songlink)
-         pygame.mixer.music.play()
+     # def Play(self, songlink):
+     #     pygame.mixer.init()
+     #     pygame.mixer.music.load(songlink)
+     #     pygame.mixer.music.play()
          
      def Select(self, select):
          if type(select) is str:
@@ -197,15 +197,15 @@ class Function:
                 else:
                      return select
                     
-     def Push(self, push):
-         if push == "pause":
-              pygame.mixer.music.pause()
-         elif push == "resume":
-              pygame.mixer.music.unpause()
-         elif push == "stop":
-              pygame.mixer.music.stop()
-         else:
-              return push
+     # def Push(self, push):
+     #     if push == "pause":
+     #          pygame.mixer.music.pause()
+     #     elif push == "resume":
+     #          pygame.mixer.music.unpause()
+     #     elif push == "stop":
+     #          pygame.mixer.music.stop()
+     #     else:
+     #          return push
 
 class UserInterface:
      def __init__(self, songlist, artistlist, artistsonglist):
@@ -238,46 +238,46 @@ def main():
 
       ##app body
       while True:
-      selection = input("songs artists likelist\n")
+          selection = input("songs artists likelist\n")
 
-      if selection == "songs":
-         songlist = song.Songlist() # song list
-         print(ui.Show(songlist, "songs"))
-         songname = input("songname:\n") # song name
-                 
-         songindex = songlist.index(songname) # song index
-         function.Play(songlink) # select button
+          if selection == "songs":
+               songlist = song.Songlist() # song list
+               print(ui.Show(songlist, "songs"))
+               songname = input("songname:\n") # song name
+                    
+               songindex = songlist.index(songname) # song index
+               function.Play(songlink) # select button
 
-      elif selection == "artists":
-           artistlist = artist.Artistlist() # artist list
-           print(ui.Show(artistlist, "artists"))
-           artistname = input("artistname:\n") # artist name
-           artistindex = artistlist.index(artistname) # artist index
-           songlist = page.Artistsongpage(artistindex) # song list
-           print(ui.Show(songlist, "songs"))
-           songindex = songlist.index(input("songname:\n")) # song index
-           artistsonglist = artist.Artistsonglinklist(artist.Artistsonglist(song.Songlist(), artist.Artistlist()))
-           linklist = artistsonglist[artistindex] # link list
-           songlink = linklist[songindex] # song link
-           function.Play(songlink) # select button
+          elif selection == "artists":
+               artistlist = artist.Artistlist() # artist list
+               print(ui.Show(artistlist, "artists"))
+               artistname = input("artistname:\n") # artist name
+               artistindex = artistlist.index(artistname) # artist index
+               songlist = page.Artistsongpage(artistindex) # song list
+               print(ui.Show(songlist, "songs"))
+               songindex = songlist.index(input("songname:\n")) # song index
+               artistsonglist = artist.Artistsonglinklist(artist.Artistsonglist(song.Songlist(), artist.Artistlist()))
+               linklist = artistsonglist[artistindex] # link list
+               songlink = linklist[songindex] # song link
+               function.Play(songlink) # select button
 
-      elif selection == "likelist":
-           songlist = favourite.Likelist() # song list
-           print(ui.Show(songlist, "song"))
-           songname = input("songname:\n")
-           songindex = songlist.index(songname) # song index
-           linklist = favourite.Linklist(favourite.Likelist()) # link list
-           songlink = linklist[songindex] # song link
-           function.Play(songlink) # select button
-           
-      ## control function
-      def control_finction(action):
-          return function.Select(function.Push(action))
-     
-      while True:
-           action = input("shuffle\nprevious pause next\nlike resume stop\n")
-           control = control_finction(action)
-           function.Play(songlink)
+          elif selection == "likelist":
+               songlist = favourite.Likelist() # song list
+               print(ui.Show(songlist, "song"))
+               songname = input("songname:\n")
+               songindex = songlist.index(songname) # song index
+               linklist = favourite.Linklist(favourite.Likelist()) # link list
+               songlink = linklist[songindex] # song link
+               function.Play(songlink) # select button
+               
+          ## control function
+          def control_finction(action):
+               return function.Select(function.Push(action))
+          
+          while True:
+               action = input("shuffle\nprevious pause next\nlike resume stop\n")
+               control = control_finction(action)
+               function.Play(songlink)
 
 if __name__ == "__main__": 
    main()
