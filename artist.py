@@ -1,8 +1,14 @@
 # Class Artist    
 class Artist:
-     def __init__(self, infolist, linklist):
-         self.infolist = infolist
-         self.linklist = linklist
+     def __init__(self, name):
+         self.name = name
+         
+         
+         
+         
+         
+        #  self.infolist = infolist
+        #  self.linklist = linklist
 
      def Artistlist(self, index = 0):
          artistlist = []

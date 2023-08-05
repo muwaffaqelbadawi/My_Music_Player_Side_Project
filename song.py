@@ -1,7 +1,15 @@
-# Class Song 
+# This is class Song where you can find all song details
+
+import Controller
+
 class Song:
-     def __init__(self, infolist):
-        self.infolist = infolist
+     def __init__(self, name):
+          self.name = name
+          
+          
+          
+          
+     #    self.infolist = infolist
         
 # Song List                         
      def Songlist(self, index = 0):

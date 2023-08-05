@@ -5,6 +5,11 @@ class Page:
          self.artistlist = artistlist
          self.artistsonglist = artistsonglist
          
+         
+         
+         
+         
+         
      def Artistsongpage(self, pageindex): 
          print("\n{}:".format(self.artistlist[pageindex]))
          artistsonglist = self.artistsonglist[pageindex]

@@ -5,18 +5,27 @@ class Info:
          self.playdirectory = playdirectory # Song file
          
 ##  song file contain all songs information
-     def Infofile(self):
+     def file_info(self):
+          
           with open(self.infofolderdirectory, "r") as infofile:
                infofile = open(self.infofolderdirectory, "r")
           infolist = infofile.read()
           return infolist
      
+     
+     
+     
 # Play Directory that will play certain song
-     def Linklist(self, index = 0):
+     def link_list(self, index = 0):
+          
           linklist = []
+          
           with open(self.infofolderdirectory, "r") as infofile:
+               
                infofile = open(self.infofolderdirectory, "r")
           link = infofile.read().splitlines()
+          
+          
           while True:
                 try:
                    linklist.append("{}{}.mp3".format(self.playdirectory, link[index]))

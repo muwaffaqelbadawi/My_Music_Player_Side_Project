@@ -1,9 +1,10 @@
 # Class Dashboard
-
-
 # import pygames
+
+
+
 import random
-class Function:
+class Dashboard:
      def __init__(self, linklist, favouritesongdiroctory):
          self.linklist = linklist
          self.favouritesongdiroctory = favouritesongdiroctory

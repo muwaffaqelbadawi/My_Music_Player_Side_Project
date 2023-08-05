@@ -1,5 +1,5 @@
 # Class Favorite
-class Favouritesong:
+class Favorite:
      def __init__(self, songlinklist):
         self.linklist = songlinklist
         

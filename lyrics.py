@@ -1,7 +1,16 @@
 # Class Lyrics
 class Lyrics:
-     def __init__(self, lyricsfolderdirectory):
-        self.lyricsfolderdirectory = lyricsfolderdirectory #Lyrics File Directory
+     def __init__(self, name):
+          self.name = name
+          
+          
+          
+          
+
+
+
+
+
 
      def Show(self, songlist, songindex):
          lyricsfolderdirectory = self.lyricsfolderdirectory
