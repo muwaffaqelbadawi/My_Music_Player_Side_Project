@@ -1,13 +1,18 @@
-# Class Dashboard
-# import pygames
-
-
-
 import random
+from Controller import dashboard_controller
+
+# Initilize dashboard_controller
+dashboard_controller = dashboard_controller.Dashboard_controller()
+
+
 class Dashboard:
-     def __init__(self, linklist, favouritesongdiroctory):
+     def __init__(self, linklist, favourite_song_diroctory):
+          
+          
          self.linklist = linklist
-         self.favouritesongdiroctory = favouritesongdiroctory
+         
+         
+         self.favourite_song_diroctory = favourite_song_diroctory
          
      # def Play(self, songlink):
      #     pygame.mixer.init()
@@ -31,6 +36,10 @@ class Dashboard:
                      return songlink
                 else:
                      return select
+                
+                
+                
+                
                     
      # def Push(self, push):
      #     if push == "pause":

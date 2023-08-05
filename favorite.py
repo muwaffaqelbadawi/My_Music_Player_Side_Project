@@ -1,4 +1,11 @@
 # Class Favorite
+
+import os
+from os import path
+
+
+
+
 class Favorite:
      def __init__(self, songlinklist):
         self.linklist = songlinklist
@@ -8,6 +15,9 @@ class Favorite:
               likefile = open(self.favouritesongdiroctory, "r")
          filelist = likefile.readlines()
          likelist = []
+         
+         
+         
          while True:
                try:
                    likelist.append(filelist[index].strip("\n"))
@@ -15,6 +25,7 @@ class Favorite:
                except IndexError:
                       break
          return likelist
+
 
 # like song link list
      def Linklist(self, likelist, index = 0):
