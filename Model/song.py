@@ -4,5 +4,5 @@ from Controller import song_controller
 song_controller = song_controller.Song_Controller()
 
 class Song:
-     def __init__(self, name):
-          self.name = name
+     def __init__(self, title):
+          self.title = title

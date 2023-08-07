@@ -2,20 +2,22 @@
 class Artist:
      def __init__(self, name):
          self.name = name
-         
-         
-         
-         
-         
-        #  self.infolist = infolist
-        #  self.linklist = linklist
+
+
+
+
+
 
      def Artistlist(self, index = 0):
          artistlist = []
-         infolist = self.infolist.splitlines()
+         info_list = self.info_list.splitlines()
+         
+         
+         
+         
          while True:
                try:
-                   detail = infolist[index]
+                   detail = info_list[index]
                    artistname = detail[0:detail.index("-")-1]
                    if len(artistlist) == 0:
                       if "-" in detail.split()[0]:

@@ -1,15 +1,7 @@
 # This is the main Class Index of the app
 # Always remember to use snake_case with python
 
-
-import song 
-import artist
-import favorite
-import info
-import dashboard
-import lyrics
-import page
-import user_interface 
+from Model import song, artist, favorite, info, dashboard, lyrics, page, UI
 
 song = song.Song()
 artist = artist.Artist()
@@ -18,10 +10,7 @@ info = info.Info()
 dashboard = dashboard.Dashboard()
 lyrics = lyrics.Lyrics()
 page = page.Page()
-UI = user_interface.UserInterface()
-
-
-
+UI = UI.UserInterface()
 
 # Main App
 class App:
