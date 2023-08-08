@@ -1,11 +1,6 @@
 # This is the main Class Index of the app
 # Always remember to use snake_case with python
 
-# I made changing in App.py
-# #######################
-# this is also a comment
-# third comment
-
 
 
 from Model import song, artist, favorite, info, dashboard, lyrics, page, UI
