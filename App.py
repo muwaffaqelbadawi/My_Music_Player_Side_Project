@@ -3,6 +3,9 @@
 
 # I made changing in App.py
 # #######################
+# this is also a comment
+
+
 
 from Model import song, artist, favorite, info, dashboard, lyrics, page, UI
 
